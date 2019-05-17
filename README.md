@@ -51,7 +51,7 @@ Encryptsocks use `pm2` as the watcher process from `1.4.0`.
 
 ## CLI
 
-Use `localssjs` (local ssjs) to start clients to communicate with applications. The `localssjs` server will also serve a [pac](https://en.wikipedia.org/wiki/PAC) file at `http://127.0.0.1:8090` (by default) for your apps to avoid unnecessary tunnel work.
+Use `localssjs` (local ssjs) to start clients to communicate with applications.
 
 You may prefer to navigate [clients page](https://shadowsocks.org/en/download/clients.html) and choose clients for your devices instead of using `localssjs`.
 
@@ -69,10 +69,6 @@ Proxy options:
   -k PASSWORD                   password
   -m METHOD                     encryption method, default: aes-128-cfb
   -t TIMEOUT                    timeout in seconds, default: 600
-  --pac_port PAC_PORT           PAC file server port, default: 8090
-  --pac_update_gfwlist [URL]    [localssjs] Update the gfwlist
-                                for PAC server. You can specify the
-                                request URL.
   --level LOG_LEVEL             log level, default: warn
                                 example: --level verbose
 General options:
@@ -99,19 +95,6 @@ Log verbosely:
 ```
 $ serverssjs -d start --level verbose
 ```
-
-Update GFWList for your .pac file server:
-
-```
-$ localssjs --pac_update_gfwlist
-```
-
-Update GFWList for your .pac file server from a specific URL (default [url](https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt)):
-
-```
-$ localssjs --pac_update_gfwlist http://firefoxfan.cc/gfwlist/gfwlist.txt
-```
-
 ## Config
 
 ```json
@@ -120,7 +103,6 @@ $ localssjs --pac_update_gfwlist http://firefoxfan.cc/gfwlist/gfwlist.txt
   "serverPort": 8083,
   "localAddr": "127.0.0.1",
   "localPort": 1080,
-  "pacServerPort": 8090,
   "password": "YOUR_PASSWORD_HERE",
   "timeout": 600,
   "method": "aes-128-cfb",

@@ -1,12 +1,11 @@
 {
   "serverAddr": "0.0.0.0",
-  "serverPort": 8083,
+  "serverPort": 25000,
   "localAddr": "127.0.0.1",
   "localPort": 1080,
   "password": "YOUR_PASSWORD_HERE",
   "timeout": 600,
   "method": "aes-128-cfb",
-
   "level": "warn",
   "localAddrIPv6": "::1",
   "serverAddrIPv6": "::1",
